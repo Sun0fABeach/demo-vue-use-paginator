@@ -2,18 +2,20 @@
   <h1>Demo: vue-use-paginator</h1>
 
   <form action="" @submit.prevent.stop>
-    <label>
-      num buttons
+    <div id="inputs">
+      <label>
+        numButtons:
+      </label>
       <input type="number" v-model.number="numButtons">
-    </label>
-    <br>
-    <label>
-      num items
+
+      <label>
+        numItems:
+      </label>
       <input type="number" v-model.number="numItems">
-    </label>
-    <br>
-    <label>
-      page size
+
+      <label>
+        pageSize:
+      </label>
       <select v-model.number="pageSize">
         <option>5</option>
         <option>10</option>
@@ -21,23 +23,26 @@
         <option>50</option>
         <option>100</option>
       </select>
-    </label>
-    <br>
-    <label>
-      page
+
+      <label>
+        page:
+      </label>
       <input type="number" v-model.number="page">
-    </label>
-    <br>
-    <div>num pages: {{ numPages }}</div>
+    </div>
 
     <br>
+    <br>
 
-    <div>has prev: {{ hasPrev }}</div>
-    <div>has next: {{ hasNext }}</div>
+    <div>numPages: {{ numPages }}</div>
 
     <br>
 
     <div>slice: {{ slice }}</div>
+
+    <br>
+
+    <div>hasPrev: {{ hasPrev }}</div>
+    <div>hasNext: {{ hasNext }}</div>
 
     <br>
 
@@ -89,6 +94,16 @@ export default defineComponent({
 </script>
 
 <style scoped>
+#inputs {
+  display: inline-grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 1rem;
+}
+#inputs input, #inputs select {
+  box-sizing: border-box;
+  width: 60px;
+}
+
 ul.paginator {
   display: flex;
   list-style: none;
