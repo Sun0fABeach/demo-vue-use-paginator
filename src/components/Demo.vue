@@ -86,9 +86,11 @@ import usePaginator from 'vue-use-paginator'
 
 export default defineComponent({
   setup() {
-    const paginator = usePaginator({ numButtons: 5, pageSize: 5 })
-    paginator.numItems.value = 40
-    return paginator
+    return usePaginator({
+      pageSize: 10,
+      numItems: 70,
+      numButtons: 5,
+    })
   }
 })
 </script>
