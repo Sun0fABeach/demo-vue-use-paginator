@@ -80,18 +80,27 @@
   </form>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
+<script setup lang="ts">
 import usePaginator from 'vue-use-paginator'
 
-export default defineComponent({
-  setup() {
-    return usePaginator({
-      pageSize: 10,
-      numItems: 70,
-      numButtons: 5,
-    })
-  }
+const {
+  page,
+  pageSize,
+  numPages,
+  numItems,
+  numButtons,
+  slice,
+  buttons,
+  hasPrev,
+  hasNext,
+  goStart,
+  goPrev,
+  goNext,
+  goEnd,
+} = usePaginator({
+  pageSize: 10,
+  numItems: 70,
+  numButtons: 5,
 })
 </script>
 
