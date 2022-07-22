@@ -1,6 +1,6 @@
 {
   "name": "demo-vue-use-paginator",
-  "version": "0.0.0",
+  "version": "0.4.0",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
@@ -8,7 +8,7 @@
   },
   "dependencies": {
     "vue": "^3.2.31",
-    "vue-use-paginator": "^0.3.0"
+    "vue-use-paginator": "^0.4.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.2.4",
